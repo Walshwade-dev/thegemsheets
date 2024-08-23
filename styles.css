@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: white;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="number"], input[type="text"] {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+button {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.stock-container-parent.hidden, .stock-container-template.hidden {
+    display: none;
+}
+
+.stock-container-parent{
+    display: block;
+}
+
+.stock-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid lightskyblue;
+    padding: 0.5rem 0.4rem;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+}
+
+.stock-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.stock-holder input {
+    max-width: 3rem;
+    max-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+#report {
+    margin-top: 20px;
+}

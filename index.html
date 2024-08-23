@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce App</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <header class="mb-4">
+        <h1 class="font-bold text-3xl">The GEM Ent.</h1>
+        <h2 class="font-semibold text-lg"><small><span id="current-date"></span> sales</small></h2>
+    </header>
+    
+    <main>
+    <form id="stockForm">
+        <fieldset>
+            <legend>Stock Information</legend>
+            <label for="stock-origin" class="">Stock origin</label>
+            <input type="text" name="stock-origin" id="stock-origin" class="stock-origin border-2 border-indigo-500/50 rounded-md" />
+
+            <div class="stock-container-parent">
+                <!-- your template here -->
+            </div>
+
+            <button class="add-stock-btn px-2 py-1 bg-indigo-500 text-white font-bold">Add Stock</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Credited Customers</legend>
+            <div id="creditedContainer">
+                <!-- Inputs for credited customers will be dynamically added here -->
+            </div>
+            <button type="button" onclick="addCreditedCustomer()">Add Credited Customer</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Paid Credits</legend>
+            <div id="paidCreditsContainer">
+                <!-- Inputs for paid credits will be dynamically added here -->
+            </div>
+            <button type="button" onclick="addPaidCredit()">Add Paid Credit</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Expenses</legend>
+            <label for="ncc">NCC:</label>
+            <input type="number" id="ncc" >
+            <br>
+            <label for="wc">W/C:</label>
+            <input type="number" id="wc" >
+            <br>
+            <label for="labour">Labour:</label>
+            <input type="number" id="labour" >
+            <br>
+            <label for="return">Return:</label>
+            <input type="number" id="return" >
+            <br>
+            <label for="empties">Empties:</label>
+            <input type="number" id="empties" >
+            <br>
+            <label for="others">Others:</label>
+            <input type="text" id="others">
+        </fieldset>
+
+        <button type="button" onclick="generateReport()">Generate Report</button>
+    </form>
+
+    <div id="report">
+        <!-- Report will be generated here -->
+    </div>
+
+    </main>
+    <script src="/index.js"></script>
+</body>
+</html>
